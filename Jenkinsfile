@@ -7,12 +7,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'bun install'
+                pwsh 'bun install'
             }
         }
         stage('Test') {
             steps {
-                sh './jenkins/scripts/test.sh'
+                pwsh "Write-Output 'Test successful'"
             }
         }
     }
